@@ -21,6 +21,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
     testImplementation("io.grpc:grpc-stub:1.49.2")
     testImplementation("io.grpc:grpc-protobuf:1.49.2")
+    testImplementation("io.grpc:grpc-netty:1.49.2")
     testImplementation("com.google.protobuf:protobuf-java:3.21.7")
 }
 
