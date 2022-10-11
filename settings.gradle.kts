@@ -16,4 +16,3 @@ rootProject.name = "contract-first-grpc"
 
 // TODO mock client and server in test
 // TODO test example
-// TODO CI/CD

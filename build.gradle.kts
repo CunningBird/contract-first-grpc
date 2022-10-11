@@ -19,9 +19,9 @@ dependencies {
     // Test context
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
-    testImplementation("io.grpc:grpc-stub:1.49.1")
-    testImplementation("io.grpc:grpc-protobuf:1.49.1")
-    testImplementation("com.google.protobuf:protobuf-java:3.21.5")
+    testImplementation("io.grpc:grpc-stub:1.49.2")
+    testImplementation("io.grpc:grpc-protobuf:1.49.2")
+    testImplementation("com.google.protobuf:protobuf-java:3.21.7")
 }
 
 java {
@@ -57,7 +57,6 @@ protobuf {
 }
 
 tasks.withType<Test> {
-    //dependsOn(tasks.withType<>)
     useJUnitPlatform()
 }
 
@@ -65,7 +64,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/cunningbird-lab/contract-frist-grpc")
+            url = uri("https://maven.pkg.github.com/cunningbird-lab/contract-first-grpc")
             credentials {
                 username = System.getProperty("publishRegistryUsername")
                 password = System.getProperty("publishRegistryPassword")
