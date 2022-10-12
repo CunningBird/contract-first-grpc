@@ -12,4 +12,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "contract-first-grpc"
+rootProject.name = "contract-first-protobuf"

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.cunningbird.contractfirst.protobuf.contract;
+
+service PetstoreService {
+  rpc GetPets(Empty) returns (Pets);
+  rpc GetPetByID(PetID) returns (Pet);
+  rpc AddPet(Pet) returns (Pet);
+}
+
+message Empty {}
+
+message PetID {
+  int64 id = 1;
+}
+
+message Pets {
+  repeated Pet pets = 1;
+}
+
+message Pet {
+  int64 id = 1;
+  string name = 2;
+  string tag = 3;
+}

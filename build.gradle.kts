@@ -12,16 +12,16 @@ repositories {
 
 dependencies {
     // Build context
-    compileOnly("io.grpc:grpc-stub:1.49.2")
-    compileOnly("io.grpc:grpc-protobuf:1.49.2")
+    compileOnly("io.grpc:grpc-stub:1.50.2")
+    compileOnly("io.grpc:grpc-protobuf:1.50.0")
     compileOnly("com.google.protobuf:protobuf-java:3.21.7")
 
     // Test context
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
     testImplementation("io.grpc:grpc-stub:1.49.2")
-    testImplementation("io.grpc:grpc-protobuf:1.49.2")
-    testImplementation("io.grpc:grpc-netty:1.49.2")
+    testImplementation("io.grpc:grpc-protobuf:1.50.2")
+    testImplementation("io.grpc:grpc-netty:1.50.2")
     testImplementation("com.google.protobuf:protobuf-java:3.21.7")
 }
 
@@ -65,7 +65,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/cunningbird-lab/contract-first-grpc")
+            url = uri("https://maven.pkg.github.com/cunningbird/contract-first-protobuf")
             credentials {
                 username = System.getProperty("publishRegistryUsername")
                 password = System.getProperty("publishRegistryPassword")
@@ -74,8 +74,8 @@ publishing {
     }
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.cunningbird.templates"
-            artifactId = "contract-first-grpc"
+            groupId = "com.cunningbird.contractfirst.protobuf"
+            artifactId = "contract"
             version = "1.0.0"
             from(components["java"])
         }
